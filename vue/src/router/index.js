@@ -5,8 +5,12 @@ import { useStore } from 'vuex'
 import HomeView from '../views/HomeView.vue';
 import LoginView from '../views/LoginView.vue';
 import LogoutView from '../views/LogoutView.vue';
-import RegisterView from '../views/RegisterView.vue';
-
+import AboutView from '../views/AboutView.vue';
+import BookingView from '../views/BookingView.vue';
+import ContactView from '../views/ContactView.vue';
+import FaqView from '../views/FaqView.vue';
+import HighlightView from '../views/HighlightView.vue';
+import ReviewView from '../views/ReviewView.vue';
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
  * inside of App.vue depending on the URL.
@@ -41,13 +45,54 @@ const routes = [
     }
   },
   {
-    path: "/register",
-    name: "register",
-    component: RegisterView,
+    path: "/about",
+    name: "about",
+    component: AboutView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/booking",
+    name: "booking",
+    component: BookingView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/highlights",
+    name: "highlights",
+    component: HighlightView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/reviews",
+    name: "reviews",
+    component: ReviewView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: ContactView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/faq",
+    name: "faq",
+    component: FaqView,
     meta: {
       requiresAuth: false
     }
   }
+
 ];
 
 // Create the router
