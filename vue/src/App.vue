@@ -1,5 +1,5 @@
 <template>
-  <div id=background>
+    <div id="entire-page-container">
   <header id="app-header">
     <div class="logo">
     <img id="logo-img" src="@/images/headerImage.jpg" alt="picture of wedding rings">
@@ -21,26 +21,43 @@
       <img src="@/images/x.png" class="social-icon" alt="link to x"/>      
     </div>
   </header>
+  <div id=background>
   <router-view />
+</div>
 </div>
 </template>
 
 <style>
-#app-header {
-}
 
+#background {
+  background-color: #F5F5DC;
+  min-height: 100vh;
+  width: 100%;
+  background-image: 
+    linear-gradient(rgba(245, 245, 220, 0.37), rgba(245, 245, 220, 0.2)),
+    url('/src/images/sample/abby-savage-zNsSwsuyP3A-unsplash.jpg'),
+    url('/src/images/sample/abby-savage-zNsSwsuyP3A-unsplash.jpg');
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed;
+  background-blend-mode: normal, multiply;
+}
 header {
-  
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-areas:
     "logo nav s-media";
   align-items: center;
   background-color: #36454F;
-  padding: 0.25%;
+  padding: .25% .25% 0 .25%;
   border-bottom: 2px solid #D4AF37;
+  height: 11vh;
 }
-
+h1 {
+  margin: 0;
+  padding: 0;
+}
 .logo {
   grid-area: logo;
   display: flex;
@@ -86,8 +103,5 @@ header {
 .social-icon {
 width: 5%;
 }
-#background {
-  background-color: #F5F5DC;
-  height: 100vh;
-}
+
 </style>
